@@ -1,5 +1,6 @@
 Category,Emoji,Description
 Program Structure,🏗️,"How a Java file is put together: classes, access, inheritance, imports, braces and semicolons."
+Comments,💬,"Notes for humans that the compiler skips: single-line, block and Javadoc comments."
 Annotations,🏷️,Labels that start with @ and tell the compiler or the robot how to treat your code.
 Methods,⚙️,"Blocks of code that do a job: return types and the OpMode lifecycle methods init() and loop()."
 Telemetry,📡,Send data from the robot to the Driver Station screen to see what it's doing.

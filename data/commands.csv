@@ -17,3 +17,10 @@ Methods,init(),Runs once when INIT is pressed; used to get the robot ready,"publ
 Methods,loop(),Repeats about 50 times per second while the OpMode is running,"public void loop() { telemetry.addData(""Tiempo"", getRuntime()); }"
 Telemetry,telemetry.addData(),Sends a label and a value to the Driver Station screen for debugging,"telemetry.addData(""Hello"", ""World"");"
 Strings & Types,.equals(),Compares the text of two Strings; == only checks whether they are the same object,"String a = ""hola""; boolean igual = a.equals(""hola"");"
+Comments,//,Single-line comment: the compiler ignores everything after it on that line,double velocidad = 0.5; // potencia del motor (50 %)
+Comments,/* */,"Block comment: ignores everything between /* and */, even across several lines",/* Espera 500 ms a que el sensor se estabilice */
+Comments,/** */,Javadoc: a block comment that tools read to generate documentation and hover tooltips,/** Se ejecuta una vez al presionar INIT. */
+Program Structure,Case sensitivity,Java tells upper and lower case apart: potencia and Potencia are different names; keywords are always lowercase,int potencia = 1; // Potencia would fail: it doesn't exist
+Program Structure,Whitespace,"Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation",int a = 1; int b = 2;
+Program Structure,( ),"Every opening parenthesis needs a closing one; if one is missing, the program won't compile","telemetry.addData(""Nombre"", ""Ashton"");"
+Annotations,@Autonomous,Registers the OpMode in the Driver Station's Autonomous list instead of TeleOp,@Autonomous

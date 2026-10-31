@@ -8,3 +8,7 @@ telemetry.addData(),caption,First argument: the label shown on the left of the s
 telemetry.addData(),value,"Second argument: the data to show (text, number or variable)","telemetry.addData(""Velocidad"", 0.5);"
 init(),( ),The parentheses take the method's parameters; empty if it takes none,public void init() { }
 void,int,"If the method returns a whole number, swap void for int and use return",public int sumar() { return 5; }
+import,com.qualcomm.robotcore.eventloop.opmode.Autonomous,Brings in the @Autonomous annotation,import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+/* */,(nested),You can't put one /* */ inside another: the first */ closes the whole comment,/* uno /* dos */
+;,(after }),No semicolon after a closing brace,public void loop() { }
+;,(in comments),Inside a comment the ; is ignored like everything else,// x = 5;

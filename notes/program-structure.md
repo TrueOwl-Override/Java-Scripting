@@ -2,7 +2,7 @@
 
 > How a Java file is put together: classes, access, inheritance, imports, braces and semicolons.
 
-**8** items · **5** parameters  ·  [⬅ Back to index](../README.md)
+**11** items · **8** parameters  ·  [⬅ Back to index](../README.md)
 
 <a id="commands"></a>
 
@@ -16,6 +16,9 @@
 | [`;`](#cmd-sym-59) | Ends every statement; lines that open a brace { don't take one |
 | [`PascalCase`](#cmd-pascalcase) | Naming convention for classes: every word starts with a capital letter |
 | [`File name = class name`](#cmd-file-name-class-name) | A public class must have the same name as its .java file, capital letters included |
+| [`Case sensitivity`](#cmd-case-sensitivity) | Java tells upper and lower case apart: potencia and Potencia are different names; keywords are always lowercase |
+| [`Whitespace`](#cmd-whitespace) | Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation |
+| [`( )`](#cmd-sym-40-41) | Every opening parenthesis needs a closing one; if one is missing, the program won't compile |
 
 ---
 
@@ -84,6 +87,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 | `com.qualcomm.robotcore.eventloop.opmode.OpMode` | Brings in the OpMode class from the FTC SDK | `import com.qualcomm.robotcore.eventloop.opmode.OpMode;` |
 | `com.qualcomm.robotcore.eventloop.opmode.TeleOp` | Brings in the @TeleOp annotation | `import com.qualcomm.robotcore.eventloop.opmode.TeleOp;` |
 | `com.qualcomm.robotcore.eventloop.opmode.Disabled` | Brings in the @Disabled annotation | `import com.qualcomm.robotcore.eventloop.opmode.Disabled;` |
+| `com.qualcomm.robotcore.eventloop.opmode.Autonomous` | Brings in the @Autonomous annotation | `import com.qualcomm.robotcore.eventloop.opmode.Autonomous;` |
 
 <sub>[⬆ Back to top](#commands)</sub>
 
@@ -113,6 +117,11 @@ Ends every statement; lines that open a brace { don't take one
 String saludo = "Hola";
 ```
 
+| Parameter | What it does | Example |
+|:--|:--|:--|
+| `(after })` | No semicolon after a closing brace | `public void loop() { }` |
+| `(in comments)` | Inside a comment the ; is ignored like everything else | `// x = 5;` |
+
 <sub>[⬆ Back to top](#commands)</sub>
 
 ---
@@ -139,6 +148,48 @@ A public class must have the same name as its .java file, capital letters includ
 
 ```java
 HelloWorld.java → public class HelloWorld { }
+```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-case-sensitivity"></a>
+
+## `Case sensitivity`
+
+Java tells upper and lower case apart: potencia and Potencia are different names; keywords are always lowercase
+
+```java
+int potencia = 1; // Potencia would fail: it doesn't exist
+```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-whitespace"></a>
+
+## `Whitespace`
+
+Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation
+
+```java
+int a = 1; int b = 2;
+```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-sym-40-41"></a>
+
+## `( )`
+
+Every opening parenthesis needs a closing one; if one is missing, the program won't compile
+
+```java
+telemetry.addData("Nombre", "Ashton");
 ```
 
 <sub>[⬆ Back to top](#commands)</sub>

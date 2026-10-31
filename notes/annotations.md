@@ -2,7 +2,7 @@
 
 > Labels that start with @ and tell the compiler or the robot how to treat your code.
 
-**4** items · **0** parameters  ·  [⬅ Back to index](../README.md)
+**5** items · **0** parameters  ·  [⬅ Back to index](../README.md)
 
 <a id="commands"></a>
 
@@ -12,6 +12,7 @@
 | [`@Override`](#cmd-override) | Says you're replacing a method from the parent class; the compiler flags it if the name is misspelled |
 | [`@TeleOp`](#cmd-teleop) | Registers the OpMode as a driver-controlled program so it shows up on the Driver Station |
 | [`@Disabled`](#cmd-disabled) | Hides the OpMode from the Driver Station menu without deleting it (handy for tests) |
+| [`@Autonomous`](#cmd-autonomous) | Registers the OpMode in the Driver Station's Autonomous list instead of TeleOp |
 
 ---
 
@@ -65,6 +66,20 @@ Hides the OpMode from the Driver Station menu without deleting it (handy for tes
 
 ```java
 @Disabled
+```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-autonomous"></a>
+
+## `@Autonomous`
+
+Registers the OpMode in the Driver Station's Autonomous list instead of TeleOp
+
+```java
+@Autonomous
 ```
 
 <sub>[⬆ Back to top](#commands)</sub>
