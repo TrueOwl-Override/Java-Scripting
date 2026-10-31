@@ -1,0 +1,10 @@
+Command,Parameter,Description,Example
+public,(no public),Access only inside the same package; the robot's system couldn't load the OpMode,class Prueba { }
+extends,OpMode,"FTC SDK base class: gives you init(), loop(), telemetry and hardware access",public class HelloWorld extends OpMode { }
+import,com.qualcomm.robotcore.eventloop.opmode.OpMode,Brings in the OpMode class from the FTC SDK,import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import,com.qualcomm.robotcore.eventloop.opmode.TeleOp,Brings in the @TeleOp annotation,import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import,com.qualcomm.robotcore.eventloop.opmode.Disabled,Brings in the @Disabled annotation,import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+telemetry.addData(),caption,First argument: the label shown on the left of the screen,"telemetry.addData(""Distancia"", 25);"
+telemetry.addData(),value,"Second argument: the data to show (text, number or variable)","telemetry.addData(""Velocidad"", 0.5);"
+init(),( ),The parentheses take the method's parameters; empty if it takes none,public void init() { }
+void,int,"If the method returns a whole number, swap void for int and use return",public int sumar() { return 5; }

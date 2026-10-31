@@ -1,0 +1,19 @@
+Category,Command,Description,Example
+Program Structure,class,Defines a class: the container where all Java code lives,public class HelloWorld extends OpMode { }
+Program Structure,public,Access modifier: lets other classes and the robot's system use the class or method,public void init() { }
+Program Structure,extends,Inheritance: the child class gets everything the parent class already has,public class HelloWorld extends OpMode { }
+Program Structure,import,Brings in a class from a library (like the FTC SDK) so you can use it in the file,import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+Program Structure,{ },Braces: mark where a class or method starts and ends; they always come in pairs,public void loop() { }
+Program Structure,;,Ends every statement; lines that open a brace { don't take one,"String saludo = ""Hola"";"
+Program Structure,PascalCase,Naming convention for classes: every word starts with a capital letter,public class SensorColor { }
+Program Structure,File name = class name,"A public class must have the same name as its .java file, capital letters included",HelloWorld.java → public class HelloWorld { }
+Annotations,@ (annotation),Metadata that describes the code to the compiler or the system; it doesn't run anything,@Override
+Annotations,@Override,Says you're replacing a method from the parent class; the compiler flags it if the name is misspelled,@Override public void init() { }
+Annotations,@TeleOp,Registers the OpMode as a driver-controlled program so it shows up on the Driver Station,@TeleOp
+Annotations,@Disabled,Hides the OpMode from the Driver Station menu without deleting it (handy for tests),@Disabled
+Methods,void,Return type: the method does its job but gives no value back,public void init() { }
+Methods,return,Sends a value back from a method that isn't void and ends it,public int sumar() { return 5; }
+Methods,init(),Runs once when INIT is pressed; used to get the robot ready,"public void init() { telemetry.addData(""Estado"", ""Listo""); }"
+Methods,loop(),Repeats about 50 times per second while the OpMode is running,"public void loop() { telemetry.addData(""Tiempo"", getRuntime()); }"
+Telemetry,telemetry.addData(),Sends a label and a value to the Driver Station screen for debugging,"telemetry.addData(""Hello"", ""World"");"
+Strings & Types,.equals(),Compares the text of two Strings; == only checks whether they are the same object,"String a = ""hola""; boolean igual = a.equals(""hola"");"
