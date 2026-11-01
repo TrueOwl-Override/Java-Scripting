@@ -12,3 +12,8 @@ import,com.qualcomm.robotcore.eventloop.opmode.Autonomous,Brings in the @Autonom
 /* */,(nested),You can't put one /* */ inside another: the first */ closes the whole comment,/* uno /* dos */
 ;,(after }),No semicolon after a closing brace,public void loop() { }
 ;,(in comments),Inside a comment the ; is ignored like everything else,// x = 5;
+long,L (suffix),"A number too big for an int needs an L at the end; without it, it won't compile",long granos = 3000000000L;
+float,f (suffix),"Without the f, 3.14 is treated as a double and won't compile",float pi = 3.14f;
+int,(with decimals),"An int can't hold decimals: int x = 0.5; is an error, use double",double x = 0.5; // int x = 0.5; no compila
+boolean,(with 1 / 0),Java doesn't turn numbers into booleans: boolean b = 1; is an error,boolean b = true; // boolean b = 1; no compila
+Default values,(local variable),Inside a method there is no default: assign it before using it,int vueltas = 0;

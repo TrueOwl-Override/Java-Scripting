@@ -24,3 +24,20 @@ Program Structure,Case sensitivity,Java tells upper and lower case apart: potenc
 Program Structure,Whitespace,"Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation",int a = 1; int b = 2;
 Program Structure,( ),"Every opening parenthesis needs a closing one; if one is missing, the program won't compile","telemetry.addData(""Nombre"", ""Ashton"");"
 Annotations,@Autonomous,Registers the OpMode in the Driver Station's Autonomous list instead of TeleOp,@Autonomous
+Variables,Variable,A named spot in memory that holds a value; its size depends on its type,int teamNumber;
+Variables,camelCase,"Naming convention for variables: start lowercase, every next word starts with a capital",double motorSpeed = 0.5;
+Variables,Declaration,type name; reserves the space with a type and a name; required before using the variable,int teamNumber;
+Variables,= (assignment),Stores the value on the right in the variable on the left; it doesn't mean equality,teamNumber = 16072;
+Variables,Reassignment,A variable can get new values many times; it always keeps the latest and the old one is lost,int x = 5; x = 10; // x vale 10
+Variables,Initialization,type name = value; declares and assigns in one line; the most common way,double motorSpeed = 0.5;
+Variables,Default values,Class fields with no value start at 0 (numbers) or false (boolean); a local variable must be assigned before it is read,public class Robot { int vueltas; boolean listo; }
+Strings & Types,Primitive types,"Java's 8 built-in types: byte, short, int, long, float, double, char and boolean; FTC mostly uses int, double and boolean",int a = 1; double b = 0.5; boolean c = true;
+Strings & Types,byte,8-bit whole number: from -128 to 127,byte nivel = 100;
+Strings & Types,short,"16-bit whole number (-32,768 to 32,767); almost never used in FTC",short temperatura = 1200;
+Strings & Types,char,"A single Unicode character, in single quotes",char letra = 'A';
+Strings & Types,int,"32-bit whole number (-2,147,483,648 to 2,147,483,647); the standard for counting",int teamNumber = 16072;
+Strings & Types,long,64-bit whole number (up to ~9 quintillion); use it when an int isn't big enough,long granos = 3000000000L;
+Strings & Types,float,32-bit decimal (~7 digits of precision); smaller than a double,float pi = 3.14f;
+Strings & Types,double,64-bit decimal (~15-17 digits); Java's default decimal type and what sensors return,double motorSpeed = 0.5;
+Strings & Types,boolean,Holds only true or false; it doesn't accept 1 or 0 and can't be added,boolean touchSensorPressed = true;
+Strings & Types,true / false,Java's logical values; always lowercase (True won't compile),boolean esRojo = true;
