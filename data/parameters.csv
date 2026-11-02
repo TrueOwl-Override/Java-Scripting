@@ -17,3 +17,8 @@ float,f (suffix),"Without the f, 3.14 is treated as a double and won't compile",
 int,(with decimals),"An int can't hold decimals: int x = 0.5; is an error, use double",double x = 0.5; // int x = 0.5; no compila
 boolean,(with 1 / 0),Java doesn't turn numbers into booleans: boolean b = 1; is an error,boolean b = true; // boolean b = 1; no compila
 Default values,(local variable),Inside a method there is no default: assign it before using it,int vueltas = 0;
+String,(with single quotes),A text in ' ' won't compile: single quotes are only for a char,"String nombre = ""Alan""; // String nombre = 'Alan'; no compila"
+String,(lowercase s),string doesn't exist in Java: you get a cannot find symbol error,"String ok = ""sí""; // string mal = ""no""; no compila"
+Concatenation (+),(no space),"If you don't put the space inside the quotes, the text comes out stuck together","String pegado = ""Hola"" + ""Alan""; // ""HolaAlan"""
+Concatenation (+),(with a number),"If one side is a String, Java turns the number into text automatically","String equipo = ""Equipo: "" + 16072; // ""Equipo: 16072"""
+Scope,(outside the block),Using a variable after its } gives a cannot find symbol error,int x = 5; { int y = 4; } x = 10; // x = y; no compila

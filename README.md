@@ -4,7 +4,7 @@
 
 **A personal reference for learning Java (with FTC robotics in mind): keywords, syntax and concepts, with examples that compile.**
 
-![Concepts](https://img.shields.io/badge/concepts-42-2ea44f?style=for-the-badge) ![Parameters](https://img.shields.io/badge/parameters-18-0969da?style=for-the-badge) ![Categories](https://img.shields.io/badge/categories-7-8250df?style=for-the-badge)
+![Concepts](https://img.shields.io/badge/concepts-49-2ea44f?style=for-the-badge) ![Parameters](https://img.shields.io/badge/parameters-23-0969da?style=for-the-badge) ![Categories](https://img.shields.io/badge/categories-8-8250df?style=for-the-badge)
 
 🌐 **Searchable web version:** [`docs/index.html`](docs/index.html)  ·  🐧 **Companion repos:** [Linux-Commands](https://github.com/TrueOwl-Override/Linux-Commands) · [Bash-Scripting-From-Scratch](https://github.com/TrueOwl-Override/Bash-Scripting-From-Scratch)
 
@@ -22,18 +22,23 @@
 | ⚙️ | **[Methods](notes/methods.md)** | Blocks of code that do a job: return types and the OpMode lifecycle methods init() and loop(). | `void` `return` `init()` `loop()` |
 | 📡 | **[Telemetry](notes/telemetry.md)** | Send data from the robot to the Driver Station screen to see what it's doing. | `telemetry.addData()` |
 | 📦 | **[Variables](notes/variables.md)** | Named boxes in memory: how to name, declare, assign and initialize them. | `Variable` `camelCase` `Declaration` `= (assignment)` `Reassignment` `Initialization` `Default values` |
-| 🔤 | **[Strings & Types](notes/strings-types.md)** | Working with text and data types. | `.equals()` `Primitive types` `byte` `short` `char` `int` `long` `float` `double` `boolean` `true / false` |
+| 🔤 | **[Strings & Types](notes/strings-types.md)** | Working with text and data types. | `.equals()` `Primitive types` `byte` `short` `char` `int` `long` `float` `double` `boolean` `true / false` `String` `" " (double quotes)` `Class vs. primitive` `Concatenation (+)` |
+| 🔭 | **[Scope](notes/scope.md)** | Where a variable lives: blocks, braces and which code can see each variable. | `Scope` `Block` `Block hierarchy` |
 
 ## 🔤 A–Z index
 
 | Item | What it does | Category |
 |:--|:--|:--|
+| [`Block`](notes/scope.md#cmd-block) | Any section of code between { and }; each block has its own scope | 🔭 Scope |
+| [`Block hierarchy`](notes/scope.md#cmd-block-hierarchy) | Variables from an outer block are visible in inner blocks, but not the other way around | 🔭 Scope |
 | [`boolean`](notes/strings-types.md#cmd-boolean) | Holds only true or false; it doesn't accept 1 or 0 and can't be added | 🔤 Strings & Types |
 | [`byte`](notes/strings-types.md#cmd-byte) | 8-bit whole number: from -128 to 127 | 🔤 Strings & Types |
 | [`camelCase`](notes/variables.md#cmd-camelcase) | Naming convention for variables: start lowercase, every next word starts with a capital | 📦 Variables |
 | [`Case sensitivity`](notes/program-structure.md#cmd-case-sensitivity) | Java tells upper and lower case apart: potencia and Potencia are different names; keywords are always lowercase | 🏗️ Program Structure |
 | [`char`](notes/strings-types.md#cmd-char) | A single Unicode character, in single quotes | 🔤 Strings & Types |
 | [`class`](notes/program-structure.md#cmd-class) | Defines a class: the container where all Java code lives | 🏗️ Program Structure |
+| [`Class vs. primitive`](notes/strings-types.md#cmd-class-vs-primitive) | Primitives (int, double) are lowercase; String is a class, so it starts with a capital letter | 🔤 Strings & Types |
+| [`Concatenation (+)`](notes/strings-types.md#cmd-concatenation) | Joins texts, or text with numbers, into one String; it doesn't add spaces on its own | 🔤 Strings & Types |
 | [`Declaration`](notes/variables.md#cmd-declaration) | type name; reserves the space with a type and a name; required before using the variable | 📦 Variables |
 | [`Default values`](notes/variables.md#cmd-default-values) | Class fields with no value start at 0 (numbers) or false (boolean); a local variable must be assigned before it is read | 📦 Variables |
 | [`double`](notes/strings-types.md#cmd-double) | 64-bit decimal (~15-17 digits); Java's default decimal type and what sensors return | 🔤 Strings & Types |
@@ -51,12 +56,15 @@
 | [`public`](notes/program-structure.md#cmd-public) | Access modifier: lets other classes and the robot's system use the class or method | 🏗️ Program Structure |
 | [`Reassignment`](notes/variables.md#cmd-reassignment) | A variable can get new values many times; it always keeps the latest and the old one is lost | 📦 Variables |
 | [`return`](notes/methods.md#cmd-return) | Sends a value back from a method that isn't void and ends it | ⚙️ Methods |
+| [`Scope`](notes/scope.md#cmd-scope) | Where a variable exists: it's born at its declaration and dies at the } of the block where it was created | 🔭 Scope |
 | [`short`](notes/strings-types.md#cmd-short) | 16-bit whole number (-32,768 to 32,767); almost never used in FTC | 🔤 Strings & Types |
+| [`String`](notes/strings-types.md#cmd-string) | Class for holding text; written with a capital S and the value goes in double quotes | 🔤 Strings & Types |
 | [`telemetry.addData()`](notes/telemetry.md#cmd-telemetry-adddata) | Sends a label and a value to the Driver Station screen for debugging | 📡 Telemetry |
 | [`true / false`](notes/strings-types.md#cmd-true-false) | Java's logical values; always lowercase (True won't compile) | 🔤 Strings & Types |
 | [`Variable`](notes/variables.md#cmd-variable) | A named spot in memory that holds a value; its size depends on its type | 📦 Variables |
 | [`void`](notes/methods.md#cmd-void) | Return type: the method does its job but gives no value back | ⚙️ Methods |
 | [`Whitespace`](notes/program-structure.md#cmd-whitespace) | Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation | 🏗️ Program Structure |
+| [`" " (double quotes)`](notes/strings-types.md#cmd-double-quotes) | Wrap a text (String); single quotes ' ' are only for a char | 🔤 Strings & Types |
 | [`( )`](notes/program-structure.md#cmd-sym-40-41) | Every opening parenthesis needs a closing one; if one is missing, the program won't compile | 🏗️ Program Structure |
 | [`.equals()`](notes/strings-types.md#cmd-equals) | Compares the text of two Strings; == only checks whether they are the same object | 🔤 Strings & Types |
 | [`/* */`](notes/comments.md#cmd-sym-47-42-42-47) | Block comment: ignores everything between /* and */, even across several lines | 💬 Comments |

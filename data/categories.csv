@@ -6,3 +6,4 @@ Methods,⚙️,Blocks of code that do a job: return types and the OpMode lifecyc
 Telemetry,📡,Send data from the robot to the Driver Station screen to see what it's doing.
 Variables,📦,"Named boxes in memory: how to name, declare, assign and initialize them."
 Strings & Types,🔤,Working with text and data types.
+Scope,🔭,"Where a variable lives: blocks, braces and which code can see each variable."

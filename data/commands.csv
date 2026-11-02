@@ -41,3 +41,10 @@ Strings & Types,float,32-bit decimal (~7 digits of precision); smaller than a do
 Strings & Types,double,64-bit decimal (~15-17 digits); Java's default decimal type and what sensors return,double motorSpeed = 0.5;
 Strings & Types,boolean,Holds only true or false; it doesn't accept 1 or 0 and can't be added,boolean touchSensorPressed = true;
 Strings & Types,true / false,Java's logical values; always lowercase (True won't compile),boolean esRojo = true;
+Strings & Types,String,Class for holding text; written with a capital S and the value goes in double quotes,"String myName = ""Alan Smith"";"
+Strings & Types,""" "" (double quotes)",Wrap a text (String); single quotes ' ' are only for a char,"String nombre = ""Ashton""; char inicial = 'A';"
+Strings & Types,Class vs. primitive,"Primitives (int, double) are lowercase; String is a class, so it starts with a capital letter","int x = 5; String texto = ""cinco"";"
+Strings & Types,Concatenation (+),"Joins texts, or text with numbers, into one String; it doesn't add spaces on its own","String saludo = ""Hola, "" + myName;"
+Scope,Scope,Where a variable exists: it's born at its declaration and dies at the } of the block where it was created,int x = 5; { int y = 4; x = x + y; } // aquí y ya no existe
+Scope,Block,Any section of code between { and }; each block has its own scope,{ int y = 4; }
+Scope,Block hierarchy,"Variables from an outer block are visible in inner blocks, but not the other way around",int x = 5; { int y = x + 1; }

@@ -2,7 +2,7 @@
 
 > Working with text and data types.
 
-**11** items · **4** parameters  ·  [⬅ Back to index](../README.md)
+**15** items · **8** parameters  ·  [⬅ Back to index](../README.md)
 
 <a id="commands"></a>
 
@@ -19,6 +19,10 @@
 | [`double`](#cmd-double) | 64-bit decimal (~15-17 digits); Java's default decimal type and what sensors return |
 | [`boolean`](#cmd-boolean) | Holds only true or false; it doesn't accept 1 or 0 and can't be added |
 | [`true / false`](#cmd-true-false) | Java's logical values; always lowercase (True won't compile) |
+| [`String`](#cmd-string) | Class for holding text; written with a capital S and the value goes in double quotes |
+| [`" " (double quotes)`](#cmd-double-quotes) | Wrap a text (String); single quotes ' ' are only for a char |
+| [`Class vs. primitive`](#cmd-class-vs-primitive) | Primitives (int, double) are lowercase; String is a class, so it starts with a capital letter |
+| [`Concatenation (+)`](#cmd-concatenation) | Joins texts, or text with numbers, into one String; it doesn't add spaces on its own |
 
 ---
 
@@ -187,5 +191,71 @@ Java's logical values; always lowercase (True won't compile)
 ```java
 boolean esRojo = true;
 ```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-string"></a>
+
+## `String`
+
+Class for holding text; written with a capital S and the value goes in double quotes
+
+```java
+String myName = "Alan Smith";
+```
+
+| Parameter | What it does | Example |
+|:--|:--|:--|
+| `(with single quotes)` | A text in ' ' won't compile: single quotes are only for a char | `String nombre = "Alan"; // String nombre = 'Alan'; no compila` |
+| `(lowercase s)` | string doesn't exist in Java: you get a cannot find symbol error | `String ok = "sí"; // string mal = "no"; no compila` |
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-double-quotes"></a>
+
+## `" " (double quotes)`
+
+Wrap a text (String); single quotes ' ' are only for a char
+
+```java
+String nombre = "Ashton"; char inicial = 'A';
+```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-class-vs-primitive"></a>
+
+## `Class vs. primitive`
+
+Primitives (int, double) are lowercase; String is a class, so it starts with a capital letter
+
+```java
+int x = 5; String texto = "cinco";
+```
+
+<sub>[⬆ Back to top](#commands)</sub>
+
+---
+
+<a id="cmd-concatenation"></a>
+
+## `Concatenation (+)`
+
+Joins texts, or text with numbers, into one String; it doesn't add spaces on its own
+
+```java
+String saludo = "Hola, " + myName;
+```
+
+| Parameter | What it does | Example |
+|:--|:--|:--|
+| `(no space)` | If you don't put the space inside the quotes, the text comes out stuck together | `String pegado = "Hola" + "Alan"; // "HolaAlan"` |
+| `(with a number)` | If one side is a String, Java turns the number into text automatically | `String equipo = "Equipo: " + 16072; // "Equipo: 16072"` |
 
 <sub>[⬆ Back to top](#commands)</sub>
