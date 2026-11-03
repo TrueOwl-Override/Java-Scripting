@@ -22,3 +22,23 @@ String,(lowercase s),string doesn't exist in Java: you get a cannot find symbol 
 Concatenation (+),(no space),"If you don't put the space inside the quotes, the text comes out stuck together","String pegado = ""Hola"" + ""Alan""; // ""HolaAlan"""
 Concatenation (+),(with a number),"If one side is a String, Java turns the number into text automatically","String equipo = ""Equipo: "" + 16072; // ""Equipo: 16072"""
 Scope,(outside the block),Using a variable after its } gives a cannot find symbol error,int x = 5; { int y = 4; } x = 10; // x = y; no compila
+loop(),(reading the gamepad),"Read the controller inside loop() to see every change, about 50 times per second","public void loop() { telemetry.addData(""A"", gamepad1.a); }"
+gamepad1 / gamepad2,Start + A,"Pressed together, they register the controller as gamepad1",boolean a1 = gamepad1.a;
+gamepad1 / gamepad2,Start + B,"Pressed together, they register the controller as gamepad2",boolean a2 = gamepad2.a;
+"Buttons (a, b, x, y)",dpad_up / dpad_down / dpad_left / dpad_right,The D-pad works as four boolean buttons,boolean arriba = gamepad1.dpad_up;
+"Buttons (a, b, x, y)",left_bumper / right_bumper,Top buttons; also boolean,boolean bumper = gamepad1.right_bumper;
+"Buttons (a, b, x, y)",start / back,Center buttons; also boolean,boolean inicio = gamepad1.start;
+"Buttons (a, b, x, y)",left_stick_button / right_stick_button,true when you press the stick down,boolean click = gamepad1.left_stick_button;
+Joysticks,_x (horizontal axis),Left is -1.0 and right is 1.0,double giro = gamepad1.left_stick_x;
+Joysticks,_y (vertical axis),Up is -1.0 and down is 1.0 (the opposite of what you'd expect),double avance = -gamepad1.left_stick_y;
+Joysticks,left_ / right_,Picks the left or the right stick,double giro = gamepad1.right_stick_x;
+Joysticks,(float type),In the FTC SDK they are float; they fit in a double with no problem,double y = gamepad1.left_stick_y;
+- (negation),(0 - x),-x is the same as 0 - x,double x = 0.8; double y = 0 - x; // -0.8
+* (multiplication),(no symbol),"You can't put numbers side by side: 3x isn't valid, write 3 * x",int x = 4; int y = 3 * x; // 12
+/ (division),(with a decimal),One number with a decimal point is enough to avoid truncation,double r = 5.0 / 2; // 2.5
+Truncation (int / int),(result 0),"If the divisor is bigger, int / int gives 0",int r = 9 / 10; // 0
+Truncation (int / int),(stopped motor),A power calculated with int / int can be 0 and leave the robot still,"double potencia = 1 / 2; // 0.0, usa 1.0 / 2"
+% (modulo),(n % 2 == 0),Tells you whether a number is even,boolean esPar = 8 % 2 == 0; // true
+% (modulo),(cyclic counter),Makes a counter go back to 0 when it reaches a limit,int paso = 3; paso = (paso + 1) % 4; // vuelve a 0
+= (assignment),(value on the left),The left side must always be a variable: 10 = x; won't compile,int x = 10; // 10 = x; no compila
+( ) (precedence),(for readability),Use them even when they aren't needed so the formula is easy to read,double v = (-gamepad1.left_stick_y) / 2.0;

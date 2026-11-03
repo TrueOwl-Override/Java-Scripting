@@ -4,7 +4,7 @@
 
 **A personal reference for learning Java (with FTC robotics in mind): keywords, syntax and concepts, with examples that compile.**
 
-![Concepts](https://img.shields.io/badge/concepts-49-2ea44f?style=for-the-badge) ![Parameters](https://img.shields.io/badge/parameters-23-0969da?style=for-the-badge) ![Categories](https://img.shields.io/badge/categories-8-8250df?style=for-the-badge)
+![Concepts](https://img.shields.io/badge/concepts-63-2ea44f?style=for-the-badge) ![Parameters](https://img.shields.io/badge/parameters-43-0969da?style=for-the-badge) ![Categories](https://img.shields.io/badge/categories-10-8250df?style=for-the-badge)
 
 🌐 **Searchable web version:** [`docs/index.html`](docs/index.html)  ·  🐧 **Companion repos:** [Linux-Commands](https://github.com/TrueOwl-Override/Linux-Commands) · [Bash-Scripting-From-Scratch](https://github.com/TrueOwl-Override/Bash-Scripting-From-Scratch)
 
@@ -24,6 +24,8 @@
 | 📦 | **[Variables](notes/variables.md)** | Named boxes in memory: how to name, declare, assign and initialize them. | `Variable` `camelCase` `Declaration` `= (assignment)` `Reassignment` `Initialization` `Default values` |
 | 🔤 | **[Strings & Types](notes/strings-types.md)** | Working with text and data types. | `.equals()` `Primitive types` `byte` `short` `char` `int` `long` `float` `double` `boolean` `true / false` `String` `" " (double quotes)` `Class vs. primitive` `Concatenation (+)` |
 | 🔭 | **[Scope](notes/scope.md)** | Where a variable lives: blocks, braces and which code can see each variable. | `Scope` `Block` `Block hierarchy` |
+| 🎮 | **[Gamepad](notes/gamepad.md)** | Read the driver's controllers: buttons, joysticks and triggers through gamepad1 and gamepad2. | `gamepad1 / gamepad2` `Dot access (.)` `Buttons (a, b, x, y)` `Joysticks` `Triggers` |
+| ➗ | **[Math Operators](notes/math-operators.md)** | Do math with numbers: arithmetic, negation, integer division, modulo and order of operations. | `+ (addition)` `- (subtraction)` `- (negation)` `* (multiplication)` `/ (division)` `Truncation (int / int)` `% (modulo)` `Order of operations` `( ) (precedence)` |
 
 ## 🔤 A–Z index
 
@@ -32,6 +34,7 @@
 | [`Block`](notes/scope.md#cmd-block) | Any section of code between { and }; each block has its own scope | 🔭 Scope |
 | [`Block hierarchy`](notes/scope.md#cmd-block-hierarchy) | Variables from an outer block are visible in inner blocks, but not the other way around | 🔭 Scope |
 | [`boolean`](notes/strings-types.md#cmd-boolean) | Holds only true or false; it doesn't accept 1 or 0 and can't be added | 🔤 Strings & Types |
+| [`Buttons (a, b, x, y)`](notes/gamepad.md#cmd-buttons-a-b-x-y) | Return a boolean: true while pressed, false when released | 🎮 Gamepad |
 | [`byte`](notes/strings-types.md#cmd-byte) | 8-bit whole number: from -128 to 127 | 🔤 Strings & Types |
 | [`camelCase`](notes/variables.md#cmd-camelcase) | Naming convention for variables: start lowercase, every next word starts with a capital | 📦 Variables |
 | [`Case sensitivity`](notes/program-structure.md#cmd-case-sensitivity) | Java tells upper and lower case apart: potencia and Potencia are different names; keywords are always lowercase | 🏗️ Program Structure |
@@ -41,16 +44,20 @@
 | [`Concatenation (+)`](notes/strings-types.md#cmd-concatenation) | Joins texts, or text with numbers, into one String; it doesn't add spaces on its own | 🔤 Strings & Types |
 | [`Declaration`](notes/variables.md#cmd-declaration) | type name; reserves the space with a type and a name; required before using the variable | 📦 Variables |
 | [`Default values`](notes/variables.md#cmd-default-values) | Class fields with no value start at 0 (numbers) or false (boolean); a local variable must be assigned before it is read | 📦 Variables |
+| [`Dot access (.)`](notes/gamepad.md#cmd-dot-access) | controller.part: the dot reads one part of the controller; read it as "of" | 🎮 Gamepad |
 | [`double`](notes/strings-types.md#cmd-double) | 64-bit decimal (~15-17 digits); Java's default decimal type and what sensors return | 🔤 Strings & Types |
 | [`extends`](notes/program-structure.md#cmd-extends) | Inheritance: the child class gets everything the parent class already has | 🏗️ Program Structure |
 | [`File name = class name`](notes/program-structure.md#cmd-file-name-class-name) | A public class must have the same name as its .java file, capital letters included | 🏗️ Program Structure |
 | [`float`](notes/strings-types.md#cmd-float) | 32-bit decimal (~7 digits of precision); smaller than a double | 🔤 Strings & Types |
+| [`gamepad1 / gamepad2`](notes/gamepad.md#cmd-gamepad1-gamepad2) | The two controllers the Driver Station recognizes; each one is a Gamepad object | 🎮 Gamepad |
 | [`import`](notes/program-structure.md#cmd-import) | Brings in a class from a library (like the FTC SDK) so you can use it in the file | 🏗️ Program Structure |
 | [`init()`](notes/methods.md#cmd-init) | Runs once when INIT is pressed; used to get the robot ready | ⚙️ Methods |
 | [`Initialization`](notes/variables.md#cmd-initialization) | type name = value; declares and assigns in one line; the most common way | 📦 Variables |
 | [`int`](notes/strings-types.md#cmd-int) | 32-bit whole number (-2,147,483,648 to 2,147,483,647); the standard for counting | 🔤 Strings & Types |
+| [`Joysticks`](notes/gamepad.md#cmd-joysticks) | Return a decimal from -1.0 to 1.0; 0.0 is the center | 🎮 Gamepad |
 | [`long`](notes/strings-types.md#cmd-long) | 64-bit whole number (up to ~9 quintillion); use it when an int isn't big enough | 🔤 Strings & Types |
 | [`loop()`](notes/methods.md#cmd-loop) | Repeats about 50 times per second while the OpMode is running | ⚙️ Methods |
+| [`Order of operations`](notes/math-operators.md#cmd-order-of-operations) | * / % are solved before + -; ties go left to right | ➗ Math Operators |
 | [`PascalCase`](notes/program-structure.md#cmd-pascalcase) | Naming convention for classes: every word starts with a capital letter | 🏗️ Program Structure |
 | [`Primitive types`](notes/strings-types.md#cmd-primitive-types) | Java's 8 built-in types: byte, short, int, long, float, double, char and boolean; FTC mostly uses int, double and boolean | 🔤 Strings & Types |
 | [`public`](notes/program-structure.md#cmd-public) | Access modifier: lets other classes and the robot's system use the class or method | 🏗️ Program Structure |
@@ -60,13 +67,22 @@
 | [`short`](notes/strings-types.md#cmd-short) | 16-bit whole number (-32,768 to 32,767); almost never used in FTC | 🔤 Strings & Types |
 | [`String`](notes/strings-types.md#cmd-string) | Class for holding text; written with a capital S and the value goes in double quotes | 🔤 Strings & Types |
 | [`telemetry.addData()`](notes/telemetry.md#cmd-telemetry-adddata) | Sends a label and a value to the Driver Station screen for debugging | 📡 Telemetry |
+| [`Triggers`](notes/gamepad.md#cmd-triggers) | Decimal from 0.0 (released) to 1.0 (pressed all the way); never negative | 🎮 Gamepad |
 | [`true / false`](notes/strings-types.md#cmd-true-false) | Java's logical values; always lowercase (True won't compile) | 🔤 Strings & Types |
+| [`Truncation (int / int)`](notes/math-operators.md#cmd-truncation-int-int) | int / int throws away the decimal part; it doesn't round | ➗ Math Operators |
 | [`Variable`](notes/variables.md#cmd-variable) | A named spot in memory that holds a value; its size depends on its type | 📦 Variables |
 | [`void`](notes/methods.md#cmd-void) | Return type: the method does its job but gives no value back | ⚙️ Methods |
 | [`Whitespace`](notes/program-structure.md#cmd-whitespace) | Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation | 🏗️ Program Structure |
 | [`" " (double quotes)`](notes/strings-types.md#cmd-double-quotes) | Wrap a text (String); single quotes ' ' are only for a char | 🔤 Strings & Types |
+| [`% (modulo)`](notes/math-operators.md#cmd-modulo) | Gives the remainder (what's left over) of a whole-number division | ➗ Math Operators |
 | [`( )`](notes/program-structure.md#cmd-sym-40-41) | Every opening parenthesis needs a closing one; if one is missing, the program won't compile | 🏗️ Program Structure |
+| [`( ) (precedence)`](notes/math-operators.md#cmd-precedence) | Whatever is inside parentheses is calculated first | ➗ Math Operators |
+| [`* (multiplication)`](notes/math-operators.md#cmd-multiplication) | Multiplies; the symbol is always required | ➗ Math Operators |
+| [`+ (addition)`](notes/math-operators.md#cmd-addition) | Adds two numbers | ➗ Math Operators |
+| [`- (negation)`](notes/math-operators.md#cmd-negation) | Unary operator: flips the sign of a single value | ➗ Math Operators |
+| [`- (subtraction)`](notes/math-operators.md#cmd-subtraction) | Subtracts the number on the right from the one on the left | ➗ Math Operators |
 | [`.equals()`](notes/strings-types.md#cmd-equals) | Compares the text of two Strings; == only checks whether they are the same object | 🔤 Strings & Types |
+| [`/ (division)`](notes/math-operators.md#cmd-division) | Divides; if both numbers are int, the result is an int too | ➗ Math Operators |
 | [`/* */`](notes/comments.md#cmd-sym-47-42-42-47) | Block comment: ignores everything between /* and */, even across several lines | 💬 Comments |
 | [`/** */`](notes/comments.md#cmd-sym-47-42-42-42-47) | Javadoc: a block comment that tools read to generate documentation and hover tooltips | 💬 Comments |
 | [`//`](notes/comments.md#cmd-sym-47-47) | Single-line comment: the compiler ignores everything after it on that line | 💬 Comments |

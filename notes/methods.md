@@ -2,7 +2,7 @@
 
 > Blocks of code that do a job: return types and the OpMode lifecycle methods init() and loop().
 
-**4** items · **2** parameters  ·  [⬅ Back to index](../README.md)
+**4** items · **3** parameters  ·  [⬅ Back to index](../README.md)
 
 <a id="commands"></a>
 
@@ -74,5 +74,9 @@ Repeats about 50 times per second while the OpMode is running
 ```java
 public void loop() { telemetry.addData("Tiempo", getRuntime()); }
 ```
+
+| Parameter | What it does | Example |
+|:--|:--|:--|
+| `(reading the gamepad)` | Read the controller inside loop() to see every change, about 50 times per second | `public void loop() { telemetry.addData("A", gamepad1.a); }` |
 
 <sub>[⬆ Back to top](#commands)</sub>

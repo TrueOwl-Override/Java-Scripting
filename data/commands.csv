@@ -48,3 +48,17 @@ Strings & Types,Concatenation (+),"Joins texts, or text with numbers, into one S
 Scope,Scope,Where a variable exists: it's born at its declaration and dies at the } of the block where it was created,int x = 5; { int y = 4; x = x + y; } // aquí y ya no existe
 Scope,Block,Any section of code between { and }; each block has its own scope,{ int y = 4; }
 Scope,Block hierarchy,"Variables from an outer block are visible in inner blocks, but not the other way around",int x = 5; { int y = x + 1; }
+Gamepad,gamepad1 / gamepad2,The two controllers the Driver Station recognizes; each one is a Gamepad object,boolean disparar = gamepad2.a;
+Gamepad,Dot access (.),"controller.part: the dot reads one part of the controller; read it as ""of""",double gatillo = gamepad1.right_trigger;
+Gamepad,"Buttons (a, b, x, y)","Return a boolean: true while pressed, false when released",boolean botonA = gamepad1.a;
+Gamepad,Joysticks,Return a decimal from -1.0 to 1.0; 0.0 is the center,double avance = gamepad1.left_stick_y;
+Gamepad,Triggers,Decimal from 0.0 (released) to 1.0 (pressed all the way); never negative,double succion = gamepad1.right_trigger;
+Math Operators,+ (addition),Adds two numbers,int total = 3 + 4; // 7
+Math Operators,- (subtraction),Subtracts the number on the right from the one on the left,double diferencia = 1.0 - 0.25; // 0.75
+Math Operators,- (negation),Unary operator: flips the sign of a single value,double avance = -gamepad1.left_stick_y;
+Math Operators,* (multiplication),Multiplies; the symbol is always required,double potencia = 0.8 * 0.5; // 0.4
+Math Operators,/ (division),"Divides; if both numbers are int, the result is an int too",double mitad = 1.0 / 2; // 0.5
+Math Operators,Truncation (int / int),int / int throws away the decimal part; it doesn't round,int r = 5 / 2; // 2
+Math Operators,% (modulo),Gives the remainder (what's left over) of a whole-number division,int resto = 11 % 4; // 3
+Math Operators,Order of operations,* / % are solved before + -; ties go left to right,int r = 10 + 5 * 2; // 20
+Math Operators,( ) (precedence),Whatever is inside parentheses is calculated first,int r = 3 * (4 + 2); // 18

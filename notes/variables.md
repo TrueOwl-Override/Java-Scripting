@@ -2,7 +2,7 @@
 
 > Named boxes in memory: how to name, declare, assign and initialize them.
 
-**7** items · **1** parameters  ·  [⬅ Back to index](../README.md)
+**7** items · **2** parameters  ·  [⬅ Back to index](../README.md)
 
 <a id="commands"></a>
 
@@ -69,6 +69,10 @@ Stores the value on the right in the variable on the left; it doesn't mean equal
 ```java
 teamNumber = 16072;
 ```
+
+| Parameter | What it does | Example |
+|:--|:--|:--|
+| `(value on the left)` | The left side must always be a variable: 10 = x; won't compile | `int x = 10; // 10 = x; no compila` |
 
 <sub>[⬆ Back to top](#commands)</sub>
 

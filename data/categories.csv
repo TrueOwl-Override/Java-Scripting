@@ -7,3 +7,5 @@ Telemetry,📡,Send data from the robot to the Driver Station screen to see what
 Variables,📦,"Named boxes in memory: how to name, declare, assign and initialize them."
 Strings & Types,🔤,Working with text and data types.
 Scope,🔭,"Where a variable lives: blocks, braces and which code can see each variable."
+Gamepad,🎮,"Read the driver's controllers: buttons, joysticks and triggers through gamepad1 and gamepad2."
+Math Operators,➗,"Do math with numbers: arithmetic, negation, integer division, modulo and order of operations."
