@@ -2,7 +2,7 @@
 
 > Send data from the robot to the Driver Station screen to see what it's doing.
 
-**1** items · **2** parameters  ·  [⬅ Back to index](../README.md)
+**1** items · **3** parameters  ·  [⬅ Back to index](../README.md)
 
 <a id="commands"></a>
 
@@ -26,5 +26,6 @@ telemetry.addData("Hello", "World");
 |:--|:--|:--|
 | `caption` | First argument: the label shown on the left of the screen | `telemetry.addData("Distancia", 25);` |
 | `value` | Second argument: the data to show (text, number or variable) | `telemetry.addData("Velocidad", 0.5);` |
+| `(with an operation)` | The value can be a calculation: it's computed and the result is shown | `telemetry.addData("Suma gatillos", gamepad1.left_trigger + gamepad1.right_trigger);` |
 
 <sub>[⬆ Back to top](#commands)</sub>

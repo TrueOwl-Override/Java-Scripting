@@ -62,3 +62,11 @@ Math Operators,Truncation (int / int),int / int throws away the decimal part; it
 Math Operators,% (modulo),Gives the remainder (what's left over) of a whole-number division,int resto = 11 % 4; // 3
 Math Operators,Order of operations,* / % are solved before + -; ties go left to right,int r = 10 + 5 * 2; // 20
 Math Operators,( ) (precedence),Whatever is inside parentheses is calculated first,int r = 3 * (4 + 2); // 18
+Shortcut Operators,Compound assignment,"Does the operation and stores the result in the same variable, without repeating its name",double velocidad = 0.5; velocidad *= 2; // 1.0
+Shortcut Operators,++ (increment),Adds 1 to the variable; same as x = x + 1,int x = 5; x++; // 6
+Shortcut Operators,-- (decrement),Subtracts 1 from the variable; same as x = x - 1,int intentos = 3; intentos--; intentos--; // 1
+Shortcut Operators,+= (add and assign),Adds a value and stores it in the same variable; same as x = x + n,int puntos = 0; puntos += 50; // 50
+Shortcut Operators,-= (subtract and assign),Subtracts a value and stores it in the same variable; same as x = x - n,int puntos = 150; puntos -= 50; // 100
+Shortcut Operators,*= (multiply and assign),Multiplies and stores in the same variable; handy for scaling values,int velocidad = 10; velocidad *= 3; // 30
+Shortcut Operators,/= (divide and assign),Divides and stores in the same variable; with int it truncates too,int galletas = 10; galletas /= 2; // 5
+Shortcut Operators,%= (remainder and assign),Stores in the variable the remainder of dividing it,int segundos = 125; segundos %= 60; // 5

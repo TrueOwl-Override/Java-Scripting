@@ -42,3 +42,9 @@ Truncation (int / int),(stopped motor),A power calculated with int / int can be 
 % (modulo),(cyclic counter),Makes a counter go back to 0 when it reaches a limit,int paso = 3; paso = (paso + 1) % 4; // vuelve a 0
 = (assignment),(value on the left),The left side must always be a variable: 10 = x; won't compile,int x = 10; // 10 = x; no compila
 ( ) (precedence),(for readability),Use them even when they aren't needed so the formula is easy to read,double v = (-gamepad1.left_stick_y) / 2.0;
+++ (increment),(counter),Used to count how many times something happens,int vueltas = 0; vueltas++; // 1
+-= (subtract and assign),(vs. -),"-= changes the variable; - only calculates a new result. To show a subtraction in telemetry, use -","telemetry.addData(""Resta de sticks"", gamepad1.left_stick_y - gamepad1.right_stick_y);"
+*= (multiply and assign),(with double),Scales a power value without losing decimals,double potencia = 0.8; potencia *= 0.5; // 0.4
+/= (divide and assign),(with int),"If the variable is an int, the decimal part is thrown away",int x = 7; x /= 2; // 3
+%= (remainder and assign),(circular range),Keeps a value inside a range that starts over,int paso = 5; paso %= 4; // 1
+telemetry.addData(),(with an operation),The value can be a calculation: it's computed and the result is shown,"telemetry.addData(""Suma gatillos"", gamepad1.left_trigger + gamepad1.right_trigger);"

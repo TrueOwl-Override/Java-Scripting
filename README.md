@@ -4,7 +4,7 @@
 
 **A personal reference for learning Java (with FTC robotics in mind): keywords, syntax and concepts, with examples that compile.**
 
-![Concepts](https://img.shields.io/badge/concepts-63-2ea44f?style=for-the-badge) ![Parameters](https://img.shields.io/badge/parameters-43-0969da?style=for-the-badge) ![Categories](https://img.shields.io/badge/categories-10-8250df?style=for-the-badge)
+![Concepts](https://img.shields.io/badge/concepts-71-2ea44f?style=for-the-badge) ![Parameters](https://img.shields.io/badge/parameters-49-0969da?style=for-the-badge) ![Categories](https://img.shields.io/badge/categories-11-8250df?style=for-the-badge)
 
 🌐 **Searchable web version:** [`docs/index.html`](docs/index.html)  ·  🐧 **Companion repos:** [Linux-Commands](https://github.com/TrueOwl-Override/Linux-Commands) · [Bash-Scripting-From-Scratch](https://github.com/TrueOwl-Override/Bash-Scripting-From-Scratch)
 
@@ -26,6 +26,7 @@
 | 🔭 | **[Scope](notes/scope.md)** | Where a variable lives: blocks, braces and which code can see each variable. | `Scope` `Block` `Block hierarchy` |
 | 🎮 | **[Gamepad](notes/gamepad.md)** | Read the driver's controllers: buttons, joysticks and triggers through gamepad1 and gamepad2. | `gamepad1 / gamepad2` `Dot access (.)` `Buttons (a, b, x, y)` `Joysticks` `Triggers` |
 | ➗ | **[Math Operators](notes/math-operators.md)** | Do math with numbers: arithmetic, negation, integer division, modulo and order of operations. | `+ (addition)` `- (subtraction)` `- (negation)` `* (multiplication)` `/ (division)` `Truncation (int / int)` `% (modulo)` `Order of operations` `( ) (precedence)` |
+| 🔁 | **[Shortcut Operators](notes/shortcut-operators.md)** | Update a variable without repeating its name: ++, -- and compound assignment (+=, -=, *=, /=, %=). | `Compound assignment` `++ (increment)` `-- (decrement)` `+= (add and assign)` `-= (subtract and assign)` `*= (multiply and assign)` `/= (divide and assign)` `%= (remainder and assign)` |
 
 ## 🔤 A–Z index
 
@@ -41,6 +42,7 @@
 | [`char`](notes/strings-types.md#cmd-char) | A single Unicode character, in single quotes | 🔤 Strings & Types |
 | [`class`](notes/program-structure.md#cmd-class) | Defines a class: the container where all Java code lives | 🏗️ Program Structure |
 | [`Class vs. primitive`](notes/strings-types.md#cmd-class-vs-primitive) | Primitives (int, double) are lowercase; String is a class, so it starts with a capital letter | 🔤 Strings & Types |
+| [`Compound assignment`](notes/shortcut-operators.md#cmd-compound-assignment) | Does the operation and stores the result in the same variable, without repeating its name | 🔁 Shortcut Operators |
 | [`Concatenation (+)`](notes/strings-types.md#cmd-concatenation) | Joins texts, or text with numbers, into one String; it doesn't add spaces on its own | 🔤 Strings & Types |
 | [`Declaration`](notes/variables.md#cmd-declaration) | type name; reserves the space with a type and a name; required before using the variable | 📦 Variables |
 | [`Default values`](notes/variables.md#cmd-default-values) | Class fields with no value start at 0 (numbers) or false (boolean); a local variable must be assigned before it is read | 📦 Variables |
@@ -75,17 +77,24 @@
 | [`Whitespace`](notes/program-structure.md#cmd-whitespace) | Java ignores spaces, tabs and line breaks; blocks are marked by braces, not indentation | 🏗️ Program Structure |
 | [`" " (double quotes)`](notes/strings-types.md#cmd-double-quotes) | Wrap a text (String); single quotes ' ' are only for a char | 🔤 Strings & Types |
 | [`% (modulo)`](notes/math-operators.md#cmd-modulo) | Gives the remainder (what's left over) of a whole-number division | ➗ Math Operators |
+| [`%= (remainder and assign)`](notes/shortcut-operators.md#cmd-remainder-and-assign) | Stores in the variable the remainder of dividing it | 🔁 Shortcut Operators |
 | [`( )`](notes/program-structure.md#cmd-sym-40-41) | Every opening parenthesis needs a closing one; if one is missing, the program won't compile | 🏗️ Program Structure |
 | [`( ) (precedence)`](notes/math-operators.md#cmd-precedence) | Whatever is inside parentheses is calculated first | ➗ Math Operators |
 | [`* (multiplication)`](notes/math-operators.md#cmd-multiplication) | Multiplies; the symbol is always required | ➗ Math Operators |
+| [`*= (multiply and assign)`](notes/shortcut-operators.md#cmd-multiply-and-assign) | Multiplies and stores in the same variable; handy for scaling values | 🔁 Shortcut Operators |
 | [`+ (addition)`](notes/math-operators.md#cmd-addition) | Adds two numbers | ➗ Math Operators |
+| [`++ (increment)`](notes/shortcut-operators.md#cmd-increment) | Adds 1 to the variable; same as x = x + 1 | 🔁 Shortcut Operators |
+| [`+= (add and assign)`](notes/shortcut-operators.md#cmd-add-and-assign) | Adds a value and stores it in the same variable; same as x = x + n | 🔁 Shortcut Operators |
 | [`- (negation)`](notes/math-operators.md#cmd-negation) | Unary operator: flips the sign of a single value | ➗ Math Operators |
 | [`- (subtraction)`](notes/math-operators.md#cmd-subtraction) | Subtracts the number on the right from the one on the left | ➗ Math Operators |
+| [`-- (decrement)`](notes/shortcut-operators.md#cmd-decrement) | Subtracts 1 from the variable; same as x = x - 1 | 🔁 Shortcut Operators |
+| [`-= (subtract and assign)`](notes/shortcut-operators.md#cmd-subtract-and-assign) | Subtracts a value and stores it in the same variable; same as x = x - n | 🔁 Shortcut Operators |
 | [`.equals()`](notes/strings-types.md#cmd-equals) | Compares the text of two Strings; == only checks whether they are the same object | 🔤 Strings & Types |
 | [`/ (division)`](notes/math-operators.md#cmd-division) | Divides; if both numbers are int, the result is an int too | ➗ Math Operators |
 | [`/* */`](notes/comments.md#cmd-sym-47-42-42-47) | Block comment: ignores everything between /* and */, even across several lines | 💬 Comments |
 | [`/** */`](notes/comments.md#cmd-sym-47-42-42-42-47) | Javadoc: a block comment that tools read to generate documentation and hover tooltips | 💬 Comments |
 | [`//`](notes/comments.md#cmd-sym-47-47) | Single-line comment: the compiler ignores everything after it on that line | 💬 Comments |
+| [`/= (divide and assign)`](notes/shortcut-operators.md#cmd-divide-and-assign) | Divides and stores in the same variable; with int it truncates too | 🔁 Shortcut Operators |
 | [`;`](notes/program-structure.md#cmd-sym-59) | Ends every statement; lines that open a brace { don't take one | 🏗️ Program Structure |
 | [`= (assignment)`](notes/variables.md#cmd-assignment) | Stores the value on the right in the variable on the left; it doesn't mean equality | 📦 Variables |
 | [`@ (annotation)`](notes/annotations.md#cmd-annotation) | Metadata that describes the code to the compiler or the system; it doesn't run anything | 🏷️ Annotations |
